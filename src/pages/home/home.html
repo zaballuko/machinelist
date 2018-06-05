@@ -1,0 +1,30 @@
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      machine list
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding scroll-content>
+  <ion-list reorder="true" (ionItemReorder)="reorderItem($event)" show-delete="true">
+      <!-- cada item(iterador) de itemsNew que aparezca como item en la lista actual -->
+    <a ion-item *ngFor="let homelist of homelist" (click)="itemClicked(homelist)" class="items">
+        <!-- este es el next -->
+      {{ homelist.itemName }}
+    </a>
+  </ion-list>
+  <ion-fab right bottom #fab>
+    <button ion-fab class="ionfab">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="launchInsertPage()">
+        <img src="../assets/imgs/logo.png"/>
+      </button>
+      <ion-label></ion-label>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+

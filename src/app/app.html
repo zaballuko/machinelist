@@ -1,0 +1,17 @@
+<ion-menu [content]="NAV">
+    <ion-content>
+        <img src="../assets/imgs/logo.png" height="30%">
+        <ion-list>
+                <button ion-item>
+                    <ion-icon item-left name="home"> Home</ion-icon>
+                </button>
+
+                <a href="https://www.guerrilla-games.com/play/horizon">
+                    <button ion-item>
+                        <ion-icon item-left name="link"> Ofiziala page</ion-icon>
+                    </button>
+                </a>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #NAV></ion-nav>
